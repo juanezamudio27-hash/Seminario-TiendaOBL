@@ -20,7 +20,7 @@ export function ShopProvider({ children }) {
   const [customer, setCustomer] = useState(() => load('obl-customer', null))
   const [notice, setNotice] = useState('')
 
-  // useEffect con dependencias: guarda el carrito cada vez que cambia.
+  // useEffect: guarda el carrito cada vez que cambia.
   useEffect(() => {
     try {
       localStorage.setItem('obl-cart', JSON.stringify(cart))

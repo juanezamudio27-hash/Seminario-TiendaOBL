@@ -5,8 +5,7 @@ import useDocumentTitle from '../hooks/useDocumentTitle.js'
 import { getDiscountRate } from '../data/items.js'
 import { useShop } from '../context/ShopContext.jsx'
 
-// Esquema de validación con Yup.
-// when(): las reglas cambian según el tipo de cliente (individual o equipo).
+// Esquema de validación con Yup (las reglas cambian según el tipo de cliente).
 const schema = Yup.object({
   customerType: Yup.string().oneOf(['individual', 'team']).required(),
   email: Yup.string()
